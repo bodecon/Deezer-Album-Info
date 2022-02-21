@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Kirilov\\DeezerAlbumInfo\\": "src/"
+            "Kirillov\\DeezerAlbumInfo\\": "src/"
         }
     },
     "require": {
