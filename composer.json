@@ -1,0 +1,22 @@
+{
+    "name": "k.kirillov/deezer-album-info",
+    "description": "Get album info by album ID from deezer",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kiril Kirilov",
+            "email": "kirill.kirillov@itglobal.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kirilov\\DeezerAlbumInfo\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "7.4.x-dev",
+        "ext-json": "*"
+    }
+}
