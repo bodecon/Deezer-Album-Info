@@ -10,5 +10,5 @@ Guzzle HTTP Client 7.4.x
 
 # Installation
 ``` 
-composer require bodecon/deezer-album-info
+composer require k.kirillov/deezer-album-info
 ```
