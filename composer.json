@@ -13,6 +13,7 @@
             "Kirilov\\DeezerAlbumInfo\\": "src/"
         }
     },
+    "require": {
         "php": ">=8.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.4"
