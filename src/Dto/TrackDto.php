@@ -6,20 +6,26 @@ namespace Kirillov\DeezerAlbumInfo\Dto;
 
 class TrackDto
 {
+    private string $correctDuration;
+    private string $correctPosition;
+
     public function __construct(
-        private string $trackPosition,
+        private int $trackPosition,
         private string $trackName,
-        private string $duration
+        private int $duration
     ) {
         if ($this->trackPosition < 10) {
-            $this->trackPosition = '0' . $trackPosition;
+            $this->correctPosition = '0' . $trackPosition;
+        } else {
+            $this->correctPosition = (string)$this->trackPosition;
         }
-        $this->duration = gmdate('i:s', $this->duration);
+
+        $this->correctDuration = gmdate('i:s', $this->duration);
     }
 
     public function getPosition(): string
     {
-        return $this->trackPosition;
+        return $this->correctPosition;
     }
 
     public function getName(): string
@@ -29,6 +35,6 @@ class TrackDto
 
     public function getDuration(): string
     {
-        return $this->duration;
+        return $this->correctDuration;
     }
 }

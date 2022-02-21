@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Kirillov\DeezerAlbumInfo\Service;
 
 use Kirillov\DeezerAlbumInfo\Dto\TrackDto;
-use Kirillov\DeezerAlbumInfo\valueObject\Track;
-use Kirillov\DeezerAlbumInfo\valueObject\Url;
+use Kirillov\DeezerAlbumInfo\ValueObject\Track;
+use Kirillov\DeezerAlbumInfo\ValueObject\Url;
 use GuzzleHttp\Client;
 
 class GetTracklistService
@@ -44,6 +44,6 @@ class GetTracklistService
         $client = new Client();
 
         $response = $client->get($fullUrl);
-        return json_decode($response->getBody(), true, flags:JSON_THROW_ON_ERROR);
+        return json_decode($response->getBody()->getContents(), true, flags:JSON_THROW_ON_ERROR);
     }
 }

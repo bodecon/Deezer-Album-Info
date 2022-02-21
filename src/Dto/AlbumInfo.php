@@ -6,16 +6,18 @@ namespace Kirillov\DeezerAlbumInfo\Dto;
 
 class AlbumInfo
 {
+    private string $correctTotalDuration;
+
     public function __construct(
         private int $albumId,
         private string $artistName,
         private string $albumName,
         private string $upc,
-        private string $duration,
+        private int $duration,
         public string $label,
         public string $releaseDate
     ) {
-        $this->duration = gmdate('H:i:s', $this->duration);
+        $this->correctTotalDuration = gmdate('H:i:s', $this->duration);
     }
 
     public function getArtistName(): string
@@ -40,7 +42,7 @@ class AlbumInfo
 
     public function getDuration(): string
     {
-        return $this->duration;
+        return $this->correctTotalDuration;
     }
 
     public function getLabel(): string

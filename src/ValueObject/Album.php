@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kirillov\DeezerAlbumInfo\valueObject;
+namespace Kirillov\DeezerAlbumInfo\ValueObject;
 
 class Album
 {
