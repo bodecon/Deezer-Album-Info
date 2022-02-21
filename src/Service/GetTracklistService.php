@@ -25,7 +25,7 @@ class GetTracklistService
         $trackList = $this->sendRequest($albumId);
         $tracks = [];
 
-        foreach ($trackList as $track) {
+        foreach ($trackList['data'] as $track) {
             $trackDto = new TrackDto(
                 $track[Track::TRACK_POSITION],
                 $track[Track::TITLE],
