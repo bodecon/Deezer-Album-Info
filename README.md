@@ -12,3 +12,14 @@ Guzzle HTTP Client 7.4.x
 ``` 
 composer require k.kirillov/deezer-album-info
 ```
+
+# Usage
+```
+fetch album data:
+$service = new GetMainAlbumInfoService();
+$info = $service->findInfoByAlbumId($albumId)
+
+fetch tracklist:
+$service = new GetTracklistService();
+$tracklist = $service->get($albumId);
+```
